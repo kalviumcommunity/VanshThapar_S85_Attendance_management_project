@@ -1,25 +1,18 @@
 package com.School;
 
-class Std{
-    int StudentId;
+public class Student {
+    private static int nextStudentIdCounter = 1;
+
+    int studentId;
     String name;
 
-    void SetterFnx(int StudentId, String name){
-        this.StudentId = StudentId;
-        this.name = name;
+    // Constructor
+    public Student(String name) {
+        this.studentId = nextStudentIdCounter++; 
+        this.name = name;                      
     }
 
-    void getterFnx(){
-        System.out.println(this.StudentId + " " + this.name);
+    public void displayDetails() {
+        System.out.println("Student ID: " + this.studentId + ", Name: " + this.name);
     }
-
-}
-
-public class Student {
-    public static void main( String [] args){
-        Std s1 = new Std();
-        s1.SetterFnx(1608, "Vansh thapar");
-        s1.getterFnx();
-
-    } 
 }

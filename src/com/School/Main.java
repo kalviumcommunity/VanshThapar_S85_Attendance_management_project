@@ -2,26 +2,35 @@ package com.School;
 
 public class Main {
     public static void main(String[] args) {
-        Std[] Students = new Std[2];
-        Students[0] = new Std();
-        Students[0].SetterFnx(1, "New student 1");
-        Students[1] = new Std();
-        Students[1].SetterFnx(2, "New student 2");
-        for(int i=0;i<2;i++){
-           Students[i].getterFnx();
-        }
-        Crs[] Courses = new Crs[2];
-        Courses[0] = new Crs();
-        Courses[0].SetterFnx(10, "New Course 1");
-        Courses[1] = new Crs();
-        Courses[1].SetterFnx(20, "New Course 2");
-         for(int i=0;i<2;i++){
-            Courses[i].getterFnx();
-         }
+        System.out.println("--- School Attendance System ---");
 
+        // Using constructors for initialization
+        System.out.println("\nCreating Students and Courses using Constructors:");
+        Student student1 = new Student("Alice Wonderland");
+        Student student2 = new Student("Bob The Builder");
+
+        Course course1 = new Course("Intro to Programming");
+        Course course2 = new Course("Linear Algebra");
+
+        System.out.println("\nRegistered Students:");
+        student1.displayDetails();
+        student2.displayDetails();
+
+        System.out.println("\nAvailable Courses:");
+        course1.displayDetails();
+        course2.displayDetails();
+
+        // Demonstrate auto-ID generation with new instances
+        System.out.println("\n--- Auto-ID Generation Test ---");
+        System.out.println("Creating one more student and course...");
+        Student student3 = new Student("Charlie Chaplin");
+        Course course3 = new Course("Data Structures");
+
+        System.out.print("New Student: ");
+        student3.displayDetails();
+        System.out.print("New Course: ");
+        course3.displayDetails();
+
+        System.out.println("\nSession 3: Constructor Initialization & Auto-ID Generation Complete.");
     }
 }
-
-
-
-
