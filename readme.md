@@ -69,3 +69,4 @@ This is a 10-part code-along project to build a console-based school attendance 
 2. Compile: `javac src/com/school/*.java`
 3. Run: `java -cp src com.school.Main`
 4. Check the generated files: `students.txt`, `courses.txt`, `attendance_log.txt`.
+
