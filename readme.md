@@ -70,6 +70,7 @@ This is a 10-part code-along project to build a console-based school attendance 
 3. Run: `java -cp src com.school.Main`
 4. Check the generated files: `students.txt`, `courses.txt`, `attendance_log.txt`.
 
+
 ## Part 7: Polymorphic Behaviour in Attendance and Displaying Reports
 - Modified `AttendanceRecord` to hold `Student` and `Course` objects instead of just their IDs, enhancing its object-oriented nature and how records are displayed. The `toDataString()` method still uses IDs for simpler file storage.
 - Created a `displaySchoolDirectory(List<Person> people)` method in `Main.java` to demonstrate polymorphism. This method iterates through a list of `Person` objects (containing `Student`, `Teacher`, `Staff` instances) and calls `person.displayDetails()`. The correct overridden method for each specific object type is executed at runtime.
@@ -81,3 +82,4 @@ This is a 10-part code-along project to build a console-based school attendance 
 1. Navigate to the project root directory.
 2. Compile: `javac src/com/school/*.java`
 3. Run: `java -cp src com.school.Main`
+
